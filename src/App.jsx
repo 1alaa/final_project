@@ -4,6 +4,7 @@ import LoginPage from "./components/LoginPage";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import CoffeeTypes from "./components/CoffeeTypes";
+import BrewingMethods from "./components/BrewingMethods";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <Navbar setCurrentPage={setCurrentPage} />
       {currentPage === 'home' && <Home />}
       {currentPage === 'coffee-types' && <CoffeeTypes />}
+      {currentPage === 'brewing-methods' && <BrewingMethods />}
     </div>
   );
 }
