@@ -260,6 +260,132 @@ label {
   width: 100%;
 }
 
+.contact-page {
+  padding: 6rem 20px 4rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 15, 10, 0.9) 100%);
+}
+
+.contact-hero {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.14);
+  border-radius: 28px;
+  backdrop-filter: blur(18px);
+}
+
+.section-label {
+  color: #d4af37;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info-card,
+.contact-form {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 28px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.contact-info-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f4e4bc;
+}
+
+.contact-info-card p {
+  color: #c9a27e;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-details div span {
+  display: block;
+  color: #d4af37;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-details div strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.contact-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-badges div {
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.contact-badges h3 {
+  margin: 0 0 0.65rem;
+  color: #f4e4bc;
+  font-size: 1rem;
+}
+
+.contact-badges p {
+  color: #c9a27e;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.contact-form label {
+  display: block;
+  color: #c9a27e;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  color: #ffffff;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  outline: none;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9b8b7c;
+}
+
+.contact-form button {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -795,6 +921,284 @@ label {
 
   .coffee-type-card {
     padding: 2rem 1.5rem;
+  }
+}
+
+/* History Page Styles */
+.history-page {
+  padding: 6rem 20px;
+  background: linear-gradient(135deg, rgba(26, 15, 10, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  min-height: 100vh;
+}
+
+.history-timeline {
+  max-width: 900px;
+  margin: 4rem auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #d4af37, transparent);
+  transform: translateX(-1px);
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item.left {
+  margin-left: 0;
+  margin-right: 50%;
+  text-align: right;
+  padding-right: 4rem;
+}
+
+.timeline-item.right {
+  margin-left: 50%;
+  margin-right: 0;
+  text-align: left;
+  padding-left: 4rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.2);
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timeline-icon {
+  font-size: 1.5rem;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px rgba(139, 90, 53, 0.2);
+  transform: translateY(-2px);
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: #f4e4bc;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.timeline-period {
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-description {
+  color: #c9a27e;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Coffee Regions Section */
+.coffee-regions-section {
+  margin: 6rem 0;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.regions-subtitle {
+  text-align: center;
+  color: #c9a27e;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.region-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 15px 40px rgba(139, 90, 53, 0.2);
+}
+
+.region-emoji {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.region-card:hover .region-emoji {
+  transform: scale(1.2);
+}
+
+.region-card h3 {
+  font-size: 1.4rem;
+  color: #f4e4bc;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.region-card p {
+  color: #c9a27e;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Coffee Facts Section */
+.coffee-facts {
+  margin: 6rem 0;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fact-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 20px 50px rgba(139, 90, 53, 0.25);
+}
+
+.fact-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #d4af37, #f4e4bc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.fact-card p {
+  color: #c9a27e;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .history-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    padding-left: 70px;
+    padding-right: 0;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+
+  .regions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .history-page {
+    padding: 4rem 20px;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 60px;
+  }
+
+  .timeline-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-icon {
+    font-size: 1.2rem;
+  }
+
+  .regions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 2rem;
   }
 
   .coffee-type-card h3 {

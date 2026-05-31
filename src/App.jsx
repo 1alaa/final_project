@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import CoffeeTypes from "./components/CoffeeTypes";
 import BrewingMethods from "./components/BrewingMethods";
+import History from "./components/History";
+import ContactPage from "./components/ContactPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,6 +26,8 @@ function App() {
       {currentPage === 'home' && <Home />}
       {currentPage === 'coffee-types' && <CoffeeTypes />}
       {currentPage === 'brewing-methods' && <BrewingMethods />}
+      {currentPage === 'history' && <History />}
+      {currentPage === 'contact' && <ContactPage />}
     </div>
   );
 }
